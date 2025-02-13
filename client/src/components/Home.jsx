@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { QuizContext } from "../context/QuizContext";
 
 const Home = ({ setPage }) => {

@@ -4,7 +4,7 @@ import Login from '../components/Login';
 const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState(null);
 
     function handleLogin(data) {
@@ -22,8 +22,7 @@ export default function AuthProvider({ children }) {
             value={{
                 user,
                 handleLogin,
-                handleLogout,
-                isAuthenticated
+                handleLogout
             }}
         >
             {isAuthenticated ? children : <Login handleLogin={handleLogin} />}
